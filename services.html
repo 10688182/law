@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Practice Areas | Justice Chambers - Trusted Legal Representation
+    </title>
+    <link
+      rel="icon"
+      href="https://via.placeholder.com/32x32"
+      type="image/png"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1A365D", // Deep navy blue - conveys trust and professionalism
+              secondary: "#E2E8F0", // Light slate - for backgrounds and secondary elements
+              accent: "#2C5282", // Medium blue - for hover states and accents
+              highlight: "#B38B59", // Warm bronze - for buttons and important elements
+              text: "#2D3748", // Dark gray-blue - primary text
+              light: "#F7FAFC", // Off-white - for light backgrounds
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      }
+      .service-card {
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .feature-icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+      }
+      .tab-button {
+        transition: all 0.3s ease;
+      }
+      .tab-button.active {
+        background-color: #2c5282;
+        color: white;
+      }
+      .stats-item {
+        position: relative;
+        overflow: hidden;
+      }
+      .stats-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #2c5282, #1a365d);
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .hover-grow {
+        transition: transform 0.3s ease;
+      }
+      .hover-grow:hover {
+        transform: scale(1.05);
+      }
+      .hover-rotate {
+        transition: transform 0.3s ease;
+      }
+      .hover-rotate:hover {
+        transform: rotate(5deg);
+      }
+      .btn-hover {
+        transition: all 0.3s ease;
+      }
+      .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      .animate-pulse-slow {
+        animation: pulse 3s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+      .animate-bounce-slow {
+        animation: bounce 3s ease-in-out infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .animate-fade-slide-in {
+        animation: fadeSlideIn 0.5s ease-out;
+      }
+      @keyframes fadeSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #1a365d, #d69e2e);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 font-['Inter']">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center">
+          <span class="text-3xl font-['Pacifico'] text-primary"
+            >Justice Chambers</span
+          >
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 nav-link"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-primary font-medium hover:text-secondary transition-colors duration-300 nav-link"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 nav-link"
+            >About Us</a
+          >
+          <a
+            href="ourteam.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 nav-link"
+            >Our Team</a
+          >
+          <!-- <a
+            href="testimonials.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 nav-link"
+            >Testimonials</a
+          > -->
+          <a
+            href="contact.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 nav-link"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="contact.html"
+            class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors btn-hover"
+            >Free Consultation</a
+          >
+          <div
+            class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer hover:text-primary transition-colors"
+            id="mobile-menu-button"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t transform origin-top transition-all duration-300"
+      >
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <a
+            href="index.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100 hover:pl-2 transition-all duration-300"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-primary font-medium py-2 border-b border-gray-100 hover:pl-2 transition-all duration-300"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100 hover:pl-2 transition-all duration-300"
+            >About Us</a
+          >
+          <a
+            href="attorneys.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100 hover:pl-2 transition-all duration-300"
+            >Our Attorneys</a
+          >
+          <!-- <a
+            href="testimonials.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100 hover:pl-2 transition-all duration-300"
+            >Testimonials</a
+          > -->
+          <a
+            href="contact.html"
+            class="text-gray-700 font-medium py-2 hover:pl-2 transition-all duration-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg relative overflow-hidden">
+      <!-- Animated background elements -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div
+          class="absolute top-20 left-10 w-16 h-16 rounded-full bg-black/10 animate-float"
+        ></div>
+        <div
+          class="absolute top-1/3 right-20 w-24 h-24 rounded-full bg-black/5 animate-float-slow"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-20 h-20 rounded-full bg-black/7 animate-float"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-12 h-12 rounded-full bg-black/10 animate-float-slow"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div
+          class="max-w-4xl mx-auto text-center"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our <span class="inline-block animate-pulse-slow">Legal</span>
+            <span class="inline-block animate-bounce-slow">Practice Areas</span>
+          </h1>
+          <p
+            class="text-xl text-white/90 mb-8"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Comprehensive legal services tailored to protect your rights and
+            achieve your objectives with integrity and excellence
+          </p>
+          <div
+            class="flex justify-center space-x-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <a
+              href="#services"
+              class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors btn-hover"
+              >Explore Services</a
+            >
+            <a
+              href="contact.html"
+              class="bg-secondary text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-secondary/90 transition-colors btn-hover"
+              >Schedule Consultation</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+          <span class="text-sm font-medium text-primary mb-2 inline-block">
+            <span class="inline-block animate-bounce">
+              <i class="ri-scales-3-line mr-1"></i>
+              LEGAL EXPERTISE
+              <i class="ri-scales-3-line ml-1"></i>
+            </span>
+          </span>
+          <h2 class="text-3xl font-bold mb-4">
+            Our <span class="text-gradient">Practice Areas</span>
+          </h2>
+          <p class="text-gray-600">
+            Justice Chambers provides exceptional legal representation across a
+            comprehensive range of practice areas, delivering strategic
+            solutions tailored to your specific needs.
+          </p>
+        </div>
+
+        <div class="mt-12">
+          <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button
+              onclick="changeServiceTab('corporate')"
+              class="tab-button active px-4 py-2 rounded-md font-medium text-sm bg-blue-100 text-gray-800"
+            >
+              <i class="fas fa-briefcase mr-2"></i> Corporate Law
+            </button>
+            <button
+              onclick="changeServiceTab('litigation')"
+              class="tab-button px-4 py-2 rounded-md font-medium text-sm bg-gray-100 text-gray-800"
+            >
+              <i class="fas fa-gavel mr-2"></i> Litigation
+            </button>
+            <button
+              onclick="changeServiceTab('realestate')"
+              class="tab-button px-4 py-2 rounded-md font-medium text-sm bg-gray-100 text-gray-800"
+            >
+              <i class="fas fa-home mr-2"></i> Real Estate
+            </button>
+            <button
+              onclick="changeServiceTab('ip')"
+              class="tab-button px-4 py-2 rounded-md font-medium text-sm bg-gray-100 text-gray-800"
+            >
+              <i class="fas fa-lightbulb mr-2"></i> Intellectual Property
+            </button>
+            <button
+              onclick="changeServiceTab('family')"
+              class="tab-button px-4 py-2 rounded-md font-medium text-sm bg-gray-100 text-gray-800"
+            >
+              <i class="fas fa-heart mr-2"></i> Family Law
+            </button>
+            <button
+              onclick="changeServiceTab('employment')"
+              class="tab-button px-4 py-2 rounded-md font-medium text-sm bg-gray-100 text-gray-800"
+            >
+              <i class="fas fa-user-tie mr-2"></i> Employment Law
+            </button>
+          </div>
+
+          <!-- Corporate Law Tab -->
+          <div id="corporate-tab" class="service-tab">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Corporate Law</h3>
+                <p class="mt-4 text-gray-500">
+                  Our corporate law practice provides comprehensive legal
+                  services to businesses of all sizes, from startups to
+                  multinational corporations. We offer strategic counsel on
+                  corporate governance, compliance, mergers & acquisitions, and
+                  commercial transactions to help clients navigate complex
+                  business environments.
+                </p>
+                <p class="mt-4 text-gray-500">
+                  Our corporate law services include:
+                </p>
+
+                <div class="mt-6">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Business formation and corporate structuring
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Mergers, acquisitions, and divestitures
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Corporate governance and compliance
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Private equity and venture capital transactions
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Securities law and capital raising
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Commercial contracts and transactions
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-8">
+                  <a
+                    href="contact.html"
+                    style="background-color: #1a365d"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-blue-800"
+                  >
+                    Contact Our Corporate Team
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="relative w-full h-64 md:h-80">
+                  <div class="absolute inset-0 bg-blue-100 rounded-xl"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Corporate Law"
+                    class="absolute top-4 left-4 w-full h-full object-cover rounded-xl shadow-lg transform rotate-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Litigation Tab -->
+          <div id="litigation-tab" class="service-tab hidden">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Litigation & Dispute Resolution
+                </h3>
+                <p class="mt-4 text-gray-500">
+                  Our litigation team has a proven track record of success in
+                  state and federal courts. We handle complex commercial
+                  disputes, class actions, and appellate matters with strategic
+                  insight and courtroom excellence. Our attorneys are skilled
+                  trial lawyers who develop creative solutions to resolve
+                  disputes efficiently and effectively.
+                </p>
+
+                <div class="mt-6">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Commercial and business litigation
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Contract disputes and enforcement
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Employment litigation and disputes
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Appellate practice and complex motions
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Alternative dispute resolution (mediation/arbitration)
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        White-collar criminal defense
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href="contact.html"
+                    style="background-color: #1a365d"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-blue-800"
+                  >
+                    Contact Our Litigation Team
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="relative w-full h-64 md:h-80">
+                  <div class="absolute inset-0 bg-blue-100 rounded-xl"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Litigation"
+                    class="absolute top-4 left-4 w-full h-full object-cover rounded-xl shadow-lg transform rotate-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real Estate Tab -->
+          <div id="realestate-tab" class="service-tab hidden">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Real Estate Law
+                </h3>
+                <p class="mt-4 text-gray-500">
+                  Our real estate practice handles all aspects of property law,
+                  from residential transactions to complex commercial
+                  developments. We provide comprehensive services including due
+                  diligence, zoning, financing, and dispute resolution. Our team
+                  helps clients navigate the complexities of real estate
+                  transactions while protecting their interests at every stage.
+                </p>
+
+                <div class="mt-6">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Residential and commercial property transactions
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Real estate financing and development
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Land use and zoning matters
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Lease agreements and landlord-tenant disputes
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Title examinations and insurance
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Real estate litigation and dispute resolution
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href="contact.html"
+                    style="background-color: #1a365d"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-blue-800"
+                  >
+                    Contact Our Real Estate Team
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="relative w-full h-64 md:h-80">
+                  <div class="absolute inset-0 bg-blue-100 rounded-xl"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Real Estate Law"
+                    class="absolute top-4 left-4 w-full h-full object-cover rounded-xl shadow-lg transform rotate-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IP Tab -->
+          <div id="ip-tab" class="service-tab hidden">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Intellectual Property
+                </h3>
+                <p class="mt-4 text-gray-500">
+                  Our IP attorneys help clients protect and maximize the value
+                  of their intellectual property assets. We handle patents,
+                  trademarks, copyrights, and trade secrets with technical
+                  expertise across various industries. From registration to
+                  enforcement, we provide comprehensive IP services to safeguard
+                  your innovations and creative works.
+                </p>
+
+                <div class="mt-6">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Patent prosecution and litigation
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Trademark registration and enforcement
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Copyright protection and licensing
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Trade secret protection and litigation
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        IP portfolio management and strategy
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Technology transfer and licensing agreements
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href="contact.html"
+                    style="background-color: #1a365d"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-blue-800"
+                  >
+                    Contact Our IP Team
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="relative w-full h-64 md:h-80">
+                  <div class="absolute inset-0 bg-blue-100 rounded-xl"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Intellectual Property"
+                    class="absolute top-4 left-4 w-full h-full object-cover rounded-xl shadow-lg transform rotate-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Family Law Tab -->
+          <div id="family-tab" class="service-tab hidden">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Family Law</h3>
+                <p class="mt-4 text-gray-500">
+                  Our family law attorneys handle sensitive matters with
+                  compassion and discretion. We provide guidance on divorce,
+                  child custody, adoption, and prenuptial agreements, always
+                  prioritizing our clients' best interests. Whether through
+                  negotiation or litigation, we strive to achieve favorable
+                  outcomes while minimizing emotional and financial stress.
+                </p>
+
+                <div class="mt-6">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Divorce and separation proceedings
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Child custody and visitation matters
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Child and spousal support
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Prenuptial and postnuptial agreements
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Adoption and guardianship proceedings
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Domestic violence protection orders
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href="contact.html"
+                    style="background-color: #1a365d"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-blue-800"
+                  >
+                    Contact Our Family Law Team
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="relative w-full h-64 md:h-80">
+                  <div class="absolute inset-0 bg-blue-100 rounded-xl"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Family Law"
+                    class="absolute top-4 left-4 w-full h-full object-cover rounded-xl shadow-lg transform rotate-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Employment Law Tab -->
+          <div id="employment-tab" class="service-tab hidden">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Employment Law</h3>
+                <p class="mt-4 text-gray-500">
+                  Our employment law practice provides comprehensive counsel to
+                  both employers and employees on workplace legal matters. We
+                  help businesses establish compliant policies and procedures,
+                  while protecting employees' rights in disputes. Our attorneys
+                  are skilled in navigating the complex web of employment laws
+                  and regulations.
+                </p>
+
+                <div class="mt-6">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Employment contracts and agreements
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Workplace discrimination and harassment claims
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">Wage and hour compliance</p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Wrongful termination claims
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Employee handbooks and policies
+                      </p>
+                    </li>
+                    <li class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                      </div>
+                      <p class="ml-3 text-gray-700">
+                        Non-compete and trade secret disputes
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href="contact.html"
+                    style="background-color: #1a365d"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-blue-800"
+                  >
+                    Contact Our Employment Team
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="relative w-full h-64 md:h-80">
+                  <div class="absolute inset-0 bg-blue-100 rounded-xl"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Employment Law"
+                    class="absolute top-4 left-4 w-full h-full object-cover rounded-xl shadow-lg transform rotate-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function changeServiceTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll(".service-tab").forEach((tab) => {
+              tab.classList.add("hidden");
+            });
+
+            // Show selected tab
+            document
+              .getElementById(`${tabName}-tab`)
+              .classList.remove("hidden");
+
+            // Update active button styling
+            document.querySelectorAll(".tab-button").forEach((button) => {
+              button.classList.remove("active", "bg-blue-100");
+              button.classList.add("bg-gray-100");
+            });
+
+            // Set active button
+            event.currentTarget.classList.add("active", "bg-blue-100");
+            event.currentTarget.classList.remove("bg-gray-100");
+          }
+        </script>
+      </div>
+    </section>
+
+    <!-- Service Features -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+          <span class="text-sm font-medium text-primary mb-2 inline-block">
+            <span class="inline-block animate-bounce">
+              <i class="ri-medal-fill mr-1"></i>
+              OUR APPROACH
+              <i class="ri-medal-fill ml-1"></i>
+            </span>
+          </span>
+          <h2 class="text-3xl font-bold mb-4">
+            Why Choose <span class="text-gradient">Justice Chambers</span>
+          </h2>
+          <p class="text-gray-600">
+            We combine legal expertise with a client-focused approach to deliver
+            exceptional results tailored to your specific needs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md service-feature card-hover"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 service-icon"
+            >
+              <i class="ri-scales-3-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Decades of Experience</h3>
+            <p class="text-gray-600">
+              Our attorneys bring an average of 15+ years of legal experience,
+              with deep expertise across multiple practice areas.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md service-feature card-hover"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 service-icon"
+            >
+              <i class="ri-trophy-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Proven Track Record</h3>
+            <p class="text-gray-600">
+              We've successfully represented clients in thousands of cases,
+              achieving favorable outcomes in even the most complex matters.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md service-feature card-hover"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 service-icon"
+            >
+              <i class="ri-user-heart-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Client-Centered Approach</h3>
+            <p class="text-gray-600">
+              We prioritize your needs and goals, providing personalized
+              attention and clear communication throughout your case.
+            </p>
+          </div>
+          <!-- Feature 4 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md service-feature card-hover"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 service-icon"
+            >
+              <i class="ri-lightbulb-flash-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Strategic Thinking</h3>
+            <p class="text-gray-600">
+              We develop innovative legal strategies tailored to your specific
+              situation and objectives.
+            </p>
+          </div>
+          <!-- Feature 5 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md service-feature card-hover"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 service-icon"
+            >
+              <i class="ri-team-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Collaborative Teamwork</h3>
+            <p class="text-gray-600">
+              Our attorneys work collaboratively across practice areas to
+              provide comprehensive solutions for complex legal challenges.
+            </p>
+          </div>
+          <!-- Feature 6 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md service-feature card-hover"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 service-icon"
+            >
+              <i class="ri-shield-star-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Ethical Standards</h3>
+            <p class="text-gray-600">
+              We uphold the highest ethical standards, ensuring your case is
+              handled with integrity and professionalism.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-primary/5">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Stat 1 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="text-4xl font-bold text-primary mb-2 count-up"
+              data-count="30"
+            >
+              0
+            </div>
+            <div class="text-gray-600">Years in Practice</div>
+          </div>
+          <!-- Stat 2 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="text-4xl font-bold text-primary mb-2 count-up"
+              data-count="15"
+            >
+              0
+            </div>
+            <div class="text-gray-600">Attorneys</div>
+          </div>
+          <!-- Stat 3 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="text-4xl font-bold text-primary mb-2 count-up"
+              data-count="2500"
+            >
+              0+
+            </div>
+            <div class="text-gray-600">Cases Handled</div>
+          </div>
+          <!-- Stat 4 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="text-4xl font-bold text-primary mb-2 count-up"
+              data-count="98"
+            >
+              0
+            </div>
+            <div class="text-gray-600">Client Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+          <span class="text-sm font-medium text-primary mb-2 inline-block">
+            <span class="inline-block animate-bounce">
+              <i class="ri-double-quotes-l mr-1"></i>
+              CLIENT TESTIMONIALS
+              <i class="ri-double-quotes-r ml-1"></i>
+            </span>
+          </span>
+          <h2 class="text-3xl font-bold mb-4">
+            What Our <span class="text-gradient">Clients Say</span>
+          </h2>
+          <p class="text-gray-600">
+            Don't just take our word for it - hear from our satisfied clients.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-md relative"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+            >
+              <i class="ri-double-quotes-l text-white"></i>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "Justice Chambers represented me in a complex business dispute.
+              Their strategic approach and attention to detail resulted in a
+              favorable settlement that exceeded my expectations. I highly
+              recommend their services."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4 mt-1 hover-rotate"
+              >
+                <i class="ri-user-line text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Michael Richardson</h4>
+                <p class="text-sm text-gray-500">CEO, TechGlobal Inc.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-md relative"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+            >
+              <i class="ri-double-quotes-l text-white"></i>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "During a difficult divorce, the family law team at Justice
+              Chambers provided compassionate yet strong representation. They
+              protected my rights and helped secure a fair custody arrangement
+              for my children."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4 mt-1 hover-rotate"
+              >
+                <i class="ri-user-line text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Sophia Martinez</h4>
+                <p class="text-sm text-gray-500">Small Business Owner</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-md relative"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center"
+            >
+              <i class="ri-double-quotes-l text-white"></i>
+            </div>
+            <p class="text-gray-600 mb-4 italic">
+              "As a real estate developer, I've worked with many law firms, but
+              Justice Chambers stands out for their commercial real estate
+              expertise. They've helped navigate complex zoning issues and
+              contracts for multiple projects."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4 mt-1 hover-rotate"
+              >
+                <i class="ri-user-line text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Robert Chen</h4>
+                <p class="text-sm text-gray-500">Real Estate Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-16 bg-gradient-to-r from-primary to-secondary relative overflow-hidden"
+    >
+      <!-- Animated background elements -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div
+          class="absolute top-20 left-10 w-16 h-16 rounded-full bg-white/10 animate-float"
+        ></div>
+        <div
+          class="absolute top-1/3 right-20 w-24 h-24 rounded-full bg-white/5 animate-float-slow"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-20 h-20 rounded-full bg-white/7 animate-float"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-12 h-12 rounded-full bg-white/10 animate-float-slow"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+          <h2 class="text-3xl font-bold text-white mb-6">
+            Ready to <span class="inline-block animate-bounce">Protect</span>
+            Your Rights?
+          </h2>
+          <p class="text-white/90 mb-8">
+            Our legal team is standing by to review your case and recommend the
+            best course of action for your specific situation.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="contact.html"
+              class="bg-white text-primary px-8 py-4 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors btn-hover"
+              >Schedule Consultation</a
+            >
+            <a
+              href="tel:+44 (0)20 7123 4567"
+              class="bg-transparent border-2 border-white text-white px-8 py-4 !rounded-button whitespace-nowrap font-medium hover:bg-white/10 transition-colors btn-hover"
+            >
+              <i class="ri-phone-line mr-2"></i> Call Us Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 animate-fade-in">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <a href="index.html" class="inline-block mb-6 hover-grow">
+              <span class="text-3xl font-['Pacifico'] text-white"
+                >Justice Chambers</span
+              >
+            </a>
+            <p class="text-gray-400 mb-6">
+              Providing exceptional legal services with integrity and
+              professionalism since 1995. We are committed to delivering
+              personalized legal solutions that achieve the best possible
+              outcomes for our clients.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 hover:-translate-y-1"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 hover:-translate-y-1"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 hover:-translate-y-1"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 hover:-translate-y-1"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Practice Areas
+                </a>
+              </li>
+              <li>
+                <a
+                  href="attorneys.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Our Attorneys
+                </a>
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h4 class="text-lg font-semibold mb-6">Practice Areas</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Corporate Law
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Litigation
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Real Estate
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Intellectual Property
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Family Law
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-flex items-center group"
+                >
+                  <i
+                    class="ri-arrow-right-s-line mr-2 text-primary group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Employment Law
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400">
+            <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div
+                  class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <p class="text-gray-400">
+                  123 Justice Avenue<br />Legal District, NY 10001
+                </p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <p class="text-gray-400">+1 (555) 123-4567</p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <p class="text-gray-400">contact@justicechambers.com</p>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <p class="text-gray-400">
+                  Mon-Fri: 8:30 AM - 6:00 PM<br />Sat: By Appointment
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 Justice Chambers. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Attorney Advertising</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize AOS animation library
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: false,
+        mirror: true,
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const header = document.querySelector("header");
+            const headerHeight = header ? header.offsetHeight : 0;
+            const targetPosition =
+              targetElement.getBoundingClientRect().top +
+              window.pageYOffset -
+              headerHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
+        });
+      });
+
+      // Count up animation for stats
+      const countUpElements = document.querySelectorAll(".count-up");
+
+      const animateCountUp = () => {
+        countUpElements.forEach((element) => {
+          const target = parseInt(element.getAttribute("data-count"));
+          const duration = 2000;
+          const increment = target / (duration / 16);
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              clearInterval(timer);
+              current = target;
+            }
+            element.textContent = Math.floor(current);
+          }, 16);
+        });
+      };
+
+      // Trigger count up when elements are in view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCountUp();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      countUpElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      // Attorney tab switching
+      function changeAttorneyTab(tabName) {
+        // Hide all tabs
+        document.querySelectorAll(".attorney-tab").forEach((tab) => {
+          tab.classList.add("hidden");
+        });
+
+        // Show selected tab
+        document.getElementById(`${tabName}-tab`).classList.remove("hidden");
+
+        // Update active button
+        document.querySelectorAll(".tab-button").forEach((button) => {
+          button.classList.remove("active", "bg-blue-100");
+          button.classList.add("bg-gray-100");
+        });
+
+        // Set clicked button as active
+        const activeButton = document.querySelector(
+          `button[onclick="changeAttorneyTab('${tabName}')"]`
+        );
+        activeButton.classList.add("active", "bg-blue-100");
+        activeButton.classList.remove("bg-gray-100");
+      }
+    </script>
+
+    <!-- Initialize Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

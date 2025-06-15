@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justice Chambers - Trusted Legal Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1A365D", // Deep navy blue - conveys trust and professionalism
+              secondary: "#E2E8F0", // Light slate - for backgrounds and secondary elements
+              accent: "#2C5282", // Medium blue - for hover states and accents
+              highlight: "#B38B59", // Warm bronze - for buttons and important elements
+              text: "#2D3748", // Dark gray-blue - primary text
+              light: "#F7FAFC", // Off-white - for light backgrounds
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <!-- SweetAlert2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .carousel {
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel-item {
+        transition: opacity 0.5s ease-in-out;
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .slide-up {
+        animation: slideUp 0.8s ease-in-out;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .slide-in-right {
+        animation: slideInRight 0.8s ease-in-out;
+      }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .scale-in {
+        animation: scaleIn 0.8s ease-in-out;
+      }
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .progress-bar {
+        transition: width 0.5s ease-in-out;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .custom-checkbox {
+        position: relative;
+        cursor: pointer;
+      }
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        /* background-color: #fff; */
+        border: 2px solid #000000;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+        border-color: #000;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: #1a365d;
+        border-color: #1a365d;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .custom-checkbox .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      .custom-switch {
+        position: relative;
+        display: inline-block;
+        width: 48px;
+        height: 24px;
+      }
+      .custom-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
+      .switch-slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .switch-slider {
+        background-color: #1a365d;
+      }
+      input:checked + .switch-slider:before {
+        transform: translateX(24px);
+      }
+      .custom-range {
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        background: #e0e0e0;
+        outline: none;
+      }
+      .custom-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #1a365d;
+        cursor: pointer;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+      .custom-range::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #1a365d;
+        cursor: pointer;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      }
+      .service-hero {
+        background-image: url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+        background-color: rgba(230, 143, 12, 0.8);
+      }
+      .service-card {
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .feature-icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+      }
+      .tab-button {
+        transition: all 0.3s ease;
+      }
+      .tab-button.active {
+        background-color: #2c5282;
+        color: white;
+      }
+      .stats-item {
+        position: relative;
+        overflow: hidden;
+      }
+      .stats-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #0073ff, #1a365d);
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* New styles for partner cards */
+      .partner-card {
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
+      .partner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .partner-specialty {
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      .partner-specialty:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+      }
+      .corporate-law:before {
+        background-color: #3b82f6;
+      }
+      .litigation:before {
+        background-color: #ef4444;
+      }
+      .real-estate:before {
+        background-color: #10b981;
+      }
+      .intellectual-property:before {
+        background-color: #f59e0b;
+      }
+      .family-law:before {
+        background-color: #8b5cf6;
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #1a365d, #d69e2e);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center">
+          <span class="text-3xl font-['Pacifico'] text-primary"
+            >Justice Chambers</span
+          >
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-primary font-medium hover:text-secondary transition-colors"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >About Us</a
+          >
+          <a
+            href="ourteam.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Our Team</a
+          >
+          <!-- <a
+            href="#testimonials"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Testimonials</a
+          > -->
+          <a
+            href="#contact"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#contact"
+            class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors"
+            >Free Consultation</a
+          >
+          <div
+            class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer"
+            id="mobile-menu-button"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <a
+            href="index.html"
+            class="text-primary font-medium py-2 border-b border-gray-100"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >About Us</a
+          >
+          <a
+            href="team.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Our Team</a
+          >
+          <!-- <a
+            href="#testimonials"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Testimonials</a
+          > -->
+          <a href="#contact" class="text-gray-700 font-medium py-2">Contact</a>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Carousel -->
+    <section class="relative pt-16 overflow-hidden">
+      <div class="carousel-container relative h-[600px] overflow-hidden">
+        <div
+          class="carousel flex h-full transition-transform duration-500 ease-in-out"
+          id="carousel"
+          style="transform: translateX(0%)"
+        >
+          <!-- Slide 1 -->
+          <div
+            class="carousel-item min-w-full h-full relative"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"
+            ></div>
+            <div class="container mx-auto px-4 h-full flex items-center">
+              <div class="w-full md:w-1/2 text-white z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 slide-up">
+                  Trusted Legal Representation
+                </h1>
+                <p class="text-xl mb-8 slide-up" style="animation-delay: 0.2s">
+                  Committed to protecting your rights and achieving justice with
+                  integrity and excellence.
+                </p>
+                <div
+                  class="flex flex-wrap gap-4 slide-up"
+                  style="animation-delay: 0.4s"
+                >
+                  <a
+                    href="#contact"
+                    class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors"
+                    >Free Consultation</a
+                  >
+                  <a
+                    href="#services"
+                    class="bg-secondary text-black px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-secondary/90 transition-colors"
+                    >Our Services</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div
+            class="carousel-item min-w-full h-full relative"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"
+            ></div>
+            <div class="container mx-auto px-4 h-full flex items-center">
+              <div class="w-full md:w-1/2 text-white z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 slide-up">
+                  Experienced Legal Team
+                </h1>
+                <p class="text-xl mb-8 slide-up" style="animation-delay: 0.2s">
+                  Decades of combined experience in complex litigation and legal
+                  strategy.
+                </p>
+                <div
+                  class="flex flex-wrap gap-4 slide-up"
+                  style="animation-delay: 0.4s"
+                >
+                  <a
+                    href="#services"
+                    class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors"
+                    >Our Practice Areas</a
+                  >
+                  <a
+                    href="#contact"
+                    class="bg-secondary text-black px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-secondary/90 transition-colors"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div
+            class="carousel-item min-w-full h-full relative"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"
+            ></div>
+            <div class="container mx-auto px-4 h-full flex items-center">
+              <div class="w-full md:w-1/2 text-white z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 slide-up">
+                  Personalized Legal Solutions
+                </h1>
+                <p class="text-xl mb-8 slide-up" style="animation-delay: 0.2s">
+                  Tailored legal strategies designed to meet your unique needs
+                  and objectives.
+                </p>
+                <div
+                  class="flex flex-wrap gap-4 slide-up"
+                  style="animation-delay: 0.4s"
+                >
+                  <a
+                    href="#services"
+                    class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors"
+                    >Learn More</a
+                  >
+                  <a
+                    href="#contact"
+                    class="bg-secondary text-black px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-secondary/90 transition-colors"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel Controls -->
+        <div
+          class="absolute bottom-6 left-0 right-0 flex justify-center space-x-2"
+        >
+          <button
+            class="w-3 h-3 rounded-full bg-white/50 carousel-dot active"
+            data-index="0"
+          ></button>
+          <button
+            class="w-3 h-3 rounded-full bg-white/50 carousel-dot"
+            data-index="1"
+          ></button>
+          <button
+            class="w-3 h-3 rounded-full bg-white/50 carousel-dot"
+            data-index="2"
+          ></button>
+        </div>
+        <!-- Carousel Arrows -->
+        <button
+          class="absolute top-1/2 left-4 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          id="prev-slide"
+        >
+          <i class="ri-arrow-left-s-line ri-lg"></i>
+        </button>
+        <button
+          class="absolute top-1/2 right-4 transform -translate-y-1/2 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          id="next-slide"
+        >
+          <i class="ri-arrow-right-s-line ri-lg"></i>
+        </button>
+      </div>
+    </section>
+    <!-- Case Status Section -->
+    <section id="track" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Check Your <span class="text-gradient">Case Status</span>
+          </h2>
+          <p class="text-gray-600" style="animation-delay: 0.2s">
+            Enter your case number to get updates on your legal matter.
+          </p>
+        </div>
+        <div
+          class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8"
+          style="animation-delay: 0.4s"
+        >
+          <!-- Case Status Form -->
+          <form id="case-status-form" class="mb-8">
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="flex-grow relative">
+                <div
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 flex items-center justify-center"
+                >
+                  <i class="ri-search-line"></i>
+                </div>
+                <input
+                  type="text"
+                  id="case-number"
+                  placeholder="Enter case number"
+                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors"
+              >
+                Check Status
+              </button>
+            </div>
+          </form>
+
+          <!-- Lottie Loader -->
+          <div
+            id="lottie-loader"
+            class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-70 z-50 hidden"
+          >
+            <div id="lottie-animation" class="w-32 h-32"></div>
+          </div>
+
+          <!-- Case Status Results -->
+          <div id="case-status-results" class="hidden">
+            <div class="border-b border-gray-200 pb-4 mb-6">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold">Case Status</h3>
+                <span
+                  id="case-status"
+                  class="px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"
+                  >In Progress</span
+                >
+              </div>
+              <p class="text-sm text-gray-500">
+                Case Number:
+                <span id="display-case-number" class="font-medium text-gray-700"
+                  >JP2025-12345</span
+                >
+              </p>
+              <p class="text-sm text-gray-500">
+                Last Updated:
+                <span id="last-update" class="font-medium text-gray-700"
+                  >May 17, 2025 at 10:24 AM</span
+                >
+              </p>
+            </div>
+
+            <div class="mb-8">
+              <h4 class="text-md font-semibold mb-4">Case Progress</h4>
+              <div class="relative">
+                <div
+                  class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200"
+                ></div>
+                <div id="case-timeline" class="space-y-6">
+                  <!-- Timeline items will be inserted here -->
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="text-md font-semibold mb-3">Case Details</h4>
+                <ul class="space-y-2 text-sm">
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Case Type:</span>
+                    <span id="case-type" class="font-medium"
+                      >Civil Litigation</span
+                    >
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Assigned Attorney:</span>
+                    <span id="attorney" class="font-medium">Sarah Johnson</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Next Court Date:</span>
+                    <span id="next-date" class="font-medium"
+                      >June 15, 2025</span
+                    >
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="text-gray-600">Estimated Resolution:</span>
+                    <span id="est-resolution" class="font-medium"
+                      >October 2025</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- <div>
+                <h4 class="text-md font-semibold mb-3">Case Documents</h4>
+                <div class="bg-gray-100 rounded p-4">
+                  <div class="flex items-center mb-3">
+                    <i class="ri-file-text-line text-primary mr-2"></i>
+                    <span class="text-sm">Initial_Filing.pdf</span>
+                    <a href="#" class="ml-auto text-primary text-sm"
+                      >Download</a
+                    >
+                  </div>
+                  <div class="flex items-center mb-3">
+                    <i class="ri-file-text-line text-primary mr-2"></i>
+                    <span class="text-sm">Motion_Response.pdf</span>
+                    <a href="#" class="ml-auto text-primary text-sm"
+                      >Download</a
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <i class="ri-file-text-line text-primary mr-2"></i>
+                    <span class="text-sm">Discovery_Request.pdf</span>
+                    <a href="#" class="ml-auto text-primary text-sm"
+                      >Download</a
+                    >
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div id="case-error" class="hidden text-center py-8">
+            <div
+              class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-100 flex items-center justify-center"
+            >
+              <i class="ri-error-warning-line ri-xl text-red-500"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Case Not Found</h3>
+            <p class="text-gray-600 mb-4">
+              We couldn't find any case with the provided case number.
+            </p>
+            <button
+              id="try-again"
+              class="text-primary font-medium hover:underline"
+            >
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Practice Areas Section -->
+    <section id="services" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Our <span class="text-gradient">Practice Areas</span>
+          </h2>
+          <p class="text-gray-600" style="animation-delay: 0.2s">
+            Comprehensive legal services tailored to meet your specific needs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="h-48"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&height=400&q=80');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-scales-3-line ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Civil Litigation</h3>
+              <p class="text-gray-600 mb-4">
+                Expert representation in disputes involving contracts, property,
+                personal injury, and other civil matters.
+              </p>
+              <a
+                href="services.html"
+                class="text-primary font-medium flex items-center hover:text-secondary transition-colors"
+              >
+                Learn More
+                <i class="ri-arrow-right-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="h-48"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&height=400&q=80');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-home-4-line ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Real Estate Law</h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive legal services for property transactions,
+                disputes, zoning issues, and landlord-tenant matters.
+              </p>
+              <a
+                href="services.html"
+                class="text-primary font-medium flex items-center hover:text-secondary transition-colors"
+              >
+                Learn More
+                <i class="ri-arrow-right-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+            style="animation-delay: 0.5s"
+          >
+            <div
+              class="h-48"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&height=400&q=80');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-briefcase-4-line ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Business Law</h3>
+              <p class="text-gray-600 mb-4">
+                Guidance on corporate formation, contracts, compliance, mergers,
+                and other business legal matters.
+              </p>
+              <a
+                href="services.html"
+                class="text-primary font-medium flex items-center hover:text-secondary transition-colors"
+              >
+                Learn More
+                <i class="ri-arrow-right-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+            style="animation-delay: 0.6s"
+          >
+            <div
+              class="h-48"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&height=400&q=80');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-user-line ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Family Law</h3>
+              <p class="text-gray-600 mb-4">
+                Compassionate representation in divorce, child custody,
+                adoption, and other family-related legal matters.
+              </p>
+              <a
+                href="services.html"
+                class="text-primary font-medium flex items-center hover:text-secondary transition-colors"
+              >
+                Learn More
+                <i class="ri-arrow-right-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+            style="animation-delay: 0.7s"
+          >
+            <div
+              class="h-48"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&height=400&q=80');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-file-text-line ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Estate Planning</h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive wills, trusts, and estate planning services to
+                protect your legacy and loved ones.
+              </p>
+              <a
+                href="services.html"
+                class="text-primary font-medium flex items-center hover:text-secondary transition-colors"
+              >
+                Learn More
+                <i class="ri-arrow-right-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Service 6 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
+            style="animation-delay: 0.8s"
+          >
+            <div
+              class="h-48"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&height=400&q=80');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-shield-keyhole-line ri-lg text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Criminal Defense</h3>
+              <p class="text-gray-600 mb-4">
+                Aggressive defense representation for criminal charges at both
+                state and federal levels.
+              </p>
+              <a
+                href="services.html"
+                class="text-primary font-medium flex items-center hover:text-secondary transition-colors"
+              >
+                Learn More
+                <i class="ri-arrow-right-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="">
+            <img
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&height=600&q=80"
+              alt="About Our Firm"
+              class="rounded-lg shadow-lg w-full h-auto"
+            />
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold mb-6">
+              About <span class="text-gradient">Our Firm</span>
+            </h2>
+            <p class="text-gray-600 mb-6" style="animation-delay: 0.2s">
+              Founded in 1995 by Elizabeth Carter, Justice Chambers has
+              established itself as a premier law firm dedicated to providing
+              exceptional legal services with integrity and professionalism.
+              What began as a small practice with three attorneys has grown into
+              one of the region's most respected full-service law firms, with
+              over 15 qualified attorneys specializing in various practice
+              areas.
+            </p>
+            <p class="text-gray-600 mb-6" style="animation-delay: 0.3s">
+              Our team of experienced attorneys brings diverse expertise from
+              top law schools and prestigious judicial clerkships. Many of our
+              partners have been recognized by publications like Super Lawyers
+              and Best Lawyers, and our firm has consistently maintained an AV
+              Preeminent® rating from Martindale-Hubbell, the highest
+              recognition for legal ability and ethical standards.
+            </p>
+            <p class="text-gray-600 mb-8" style="animation-delay: 0.4s">
+              We are committed to delivering personalized legal solutions that
+              achieve the best possible outcomes for our clients while upholding
+              the highest ethical standards. Unlike larger firms where clients
+              can become just another case number, we maintain a client-centered
+              approach where every matter receives the attention it deserves
+              from experienced attorneys.
+            </p>
+            <div class="grid grid-cols-2 gap-6 mb-8">
+              <div class="" style="animation-delay: 0.4s">
+                <div
+                  class="text-3xl font-bold text-primary mb-2"
+                  id="counter-years"
+                >
+                  0
+                </div>
+                <p class="text-gray-600">Years of Combined Experience</p>
+              </div>
+              <div class="" style="animation-delay: 0.5s">
+                <div
+                  class="text-3xl font-bold text-primary mb-2"
+                  id="counter-cases"
+                >
+                  0
+                </div>
+                <p class="text-gray-600">Cases Successfully Handled</p>
+              </div>
+              <div class="" style="animation-delay: 0.6s">
+                <div
+                  class="text-3xl font-bold text-primary mb-2"
+                  id="counter-clients"
+                >
+                  0
+                </div>
+                <p class="text-gray-600">Satisfied Clients</p>
+              </div>
+              <div class="" style="animation-delay: 0.7s">
+                <div
+                  class="text-3xl font-bold text-primary mb-2"
+                  id="counter-attorneys"
+                >
+                  0
+                </div>
+                <p class="text-gray-600">Qualified Attorneys</p>
+              </div>
+            </div>
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">Our Core Values</h3>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                  <span
+                    ><strong>Integrity:</strong> We adhere to the highest
+                    ethical standards in all our dealings</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                  <span
+                    ><strong>Excellence:</strong> We strive for legal excellence
+                    in every case we handle</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                  <span
+                    ><strong>Client-Centered:</strong> Your goals become our
+                    priorities</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                  <span
+                    ><strong>Innovation:</strong> We combine traditional values
+                    with modern legal strategies</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <a
+              href="about.html"
+              class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors inline-block"
+              style="animation-delay: 0.8s"
+              >Learn More About Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Client <span class="text-gradient">Testimonials</span>
+          </h2>
+          <p class="text-gray-600" style="animation-delay: 0.2s">
+            Hear from clients who have trusted us with their legal matters.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6"
+            style="animation-delay: 0.3s"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Justice Chambers represented me in a complex business dispute.
+              Their strategic approach and attention to detail resulted in a
+              favorable settlement that exceeded my expectations. I highly
+              recommend their services."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="ri-user-line text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Michael Richardson</h4>
+                <p class="text-sm text-gray-500">CEO, TechGlobal Inc.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "During a difficult divorce, the family law team at Justice
+              Chambers provided compassionate yet strong representation. They
+              protected my rights and helped secure a fair custody arrangement
+              for my children."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="ri-user-line text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Sophia Martinez</h4>
+                <p class="text-sm text-gray-500">Small Business Owner</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6"
+            style="animation-delay: 0.5s"
+          >
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "As a real estate developer, I've worked with many law firms, but
+              Justice Chambers stands out for their commercial real estate
+              expertise. They've helped navigate complex zoning issues and
+              contracts for multiple projects."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="ri-user-line text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Robert Chen</h4>
+                <p class="text-sm text-gray-500">Real Estate Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="text-center mt-10">
+          <a
+            href="testimonials.html"
+            class="text-primary font-medium hover:text-secondary transition-colors inline-flex items-center"
+            style="animation-delay: 0.6s"
+          >
+            View All Testimonials
+            <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div> -->
+      </div>
+    </section>
+    <!-- Team Preview -->
+    <section id="team" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">
+            Our <span class="text-gradient">Legal Team</span>
+          </h2>
+          <p class="text-gray-600" style="animation-delay: 0.2s">
+            Meet our experienced partners dedicated to your legal success.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Corporate Law Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.3s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="James Wilson"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">James Wilson</h3>
+              <p class="text-primary font-medium">Senior Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty corporate-law font-medium">
+                Corporate Law
+              </p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              With over 25 years of experience, James leads our corporate
+              practice, advising Fortune 500 companies on complex mergers and
+              acquisitions.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Litigation Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="Sarah Johnson"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Sarah Johnson</h3>
+              <p class="text-primary font-medium">Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty litigation font-medium">Litigation</p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Sarah has successfully argued over 200 cases before state and
+              federal courts, with a 90% success rate in high-stakes litigation.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Real Estate Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.5s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="Michael Chen"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Michael Chen</h3>
+              <p class="text-primary font-medium">Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty real-estate font-medium">
+                Real Estate
+              </p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Michael has facilitated over $2B in real estate transactions and
+              is recognized as a leading authority on commercial property law.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Intellectual Property Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.6s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="Priya Patel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Priya Patel</h3>
+              <p class="text-primary font-medium">Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty intellectual-property font-medium">
+                Intellectual Property
+              </p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Priya heads our IP practice, with expertise in patent law and
+              technology licensing. She holds a degree in computer science
+              alongside her JD.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Family Law Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.7s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="David Rodriguez"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">David Rodriguez</h3>
+              <p class="text-primary font-medium">Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty family-law font-medium">Family Law</p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              David brings compassion and expertise to complex family law
+              matters, with a focus on child custody and high-net-worth divorce
+              cases.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Managing Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.8s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="Elizabeth Carter"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Elizabeth Carter</h3>
+              <p class="text-primary font-medium">Managing Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Oversees all practice areas</p>
+              <p class="text-gray-500 text-sm">With 30+ years experience</p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Elizabeth founded Justice Chambers in 1995 and has guided its
+              growth into one of the region's most respected full-service law
+              firms.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a
+            href="ourteam.html"
+            class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors inline-block"
+            style="animation-delay: 0.9s"
+            >Meet Our Full Team</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Contact CTA -->
+    <section id="contact" class="py-16 bg-primary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-6">Contact Us</h2>
+              <p class="text-white/80 mb-8" style="animation-delay: 0.2s">
+                Have legal questions or need representation? Our team is here to
+                provide the guidance and support you need.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start" style="animation-delay: 0.3s">
+                  <div
+                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-map-pin-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium mb-1">Our Office</h4>
+                    <p class="text-white/80">
+                      42 Chancery Lane, London WC2A 1JA<br />
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start" style="animation-delay: 0.4s">
+                  <div
+                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-phone-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium mb-1">Call Us</h4>
+                    <p class="text-white/80">+44 (0)20 7123 4567<br /></p>
+                  </div>
+                </div>
+                <div class="flex items-start" style="animation-delay: 0.5s">
+                  <div
+                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-mail-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium mb-1">Email Us</h4>
+                    <p class="text-white/80">enquiries@justicechambers.co</p>
+                  </div>
+                </div>
+                <div class="flex items-start" style="animation-delay: 0.6s">
+                  <div
+                    class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-time-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium mb-1">Office Hours</h4>
+                    <p class="text-white/80">
+                      Monday - Thursday: 9:00 - 17:30<br />
+                      Friday: 9:00 - 17:00<br />
+                      Weekends & Bank Holidays: Closed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-lg"
+              style="animation-delay: 0.7s"
+            >
+              <h3 class="text-xl font-semibold mb-4">
+                Schedule a Consultation
+              </h3>
+              <form id="contact-form">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Your name"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Your email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Your phone number"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="service"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Legal Service Needed</label
+                  >
+                  <select
+                    id="service"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
+                    required
+                  >
+                    <option value="">Select a service</option>
+                    <option value="civil">Civil Litigation</option>
+                    <option value="real-estate">Real Estate Law</option>
+                    <option value="business">Business Law</option>
+                    <option value="family">Family Law</option>
+                    <option value="estate">Estate Planning</option>
+                    <option value="criminal">Criminal Defense</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Brief Description of Your Legal Matter</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Please describe your legal issue"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-6">
+                  <label class="flex items-center">
+                    <div class="relative h-5 w-5 mr-2">
+                      <input
+                        type="checkbox"
+                        id="privacy"
+                        class="absolute h-5 w-5"
+                        required
+                      />
+                      <div class="checkmark"></div>
+                    </div>
+                    <span class="text-sm text-gray-600"
+                      >I agree to the
+                      <a href="#" class="text-primary hover:underline"
+                        >Privacy Policy</a
+                      ></span
+                    >
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Request Consultation
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="index.html" class="inline-block mb-6">
+              <span class="text-3xl font-['Pacifico'] text-white"
+                >Justice Chambers</span
+              >
+            </a>
+            <p class="text-gray-400 mb-6">
+              Providing exceptional legal services with integrity and
+              professionalism since 1995.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Practice Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#team"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Practice Areas</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Civil Litigation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Real Estate Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Family Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Estate Planning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Criminal Defense</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for legal updates and firm news.
+            </p>
+            <form id="newsletter-form" class="mb-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="flex-grow px-4 py-2 bg-gray-800 border border-gray-700 rounded-l focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-white"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="text-gray-400 text-sm">
+              <p class="mb-2">Awards & Recognitions:</p>
+              <div class="flex flex-wrap gap-2">
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  Best Law Firm 2024
+                </div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  Super Lawyers
+                </div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  AV Rated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 Justice Chambers. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Attorney Advertising</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple counter animation for statistics
+      document.addEventListener("DOMContentLoaded", function () {
+        // Counter animation
+        function animateCounter(elementId, target, duration = 2000) {
+          const element = document.getElementById(elementId);
+          const start = 0;
+          const increment = target / (duration / 16);
+          let current = start;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              clearInterval(timer);
+              current = target;
+            }
+            element.textContent = Math.floor(current).toLocaleString();
+          }, 16);
+        }
+
+        const lottieContainer = document.getElementById("lottie-animation");
+        const lottieOverlay = document.getElementById("lottie-loader");
+
+        const loaderAnim = lottie.loadAnimation({
+          container: lottieContainer,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: "https://lottie.host/b360b8ee-fa0f-4f02-86f4-ef964625012c/rlZ6Ilgk25.json",
+        });
+
+        function showLoader() {
+          lottieOverlay.classList.remove("hidden");
+        }
+
+        function hideLoader() {
+          lottieOverlay.classList.add("hidden");
+        }
+
+        // Animate counters when they come into view
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const targetId = entry.target.id;
+                if (targetId === "counter-years") {
+                  animateCounter("counter-years", 30);
+                } else if (targetId === "counter-cases") {
+                  animateCounter("counter-cases", 2500);
+                } else if (targetId === "counter-clients") {
+                  animateCounter("counter-clients", 3500);
+                } else if (targetId === "counter-attorneys") {
+                  animateCounter("counter-attorneys", 15);
+                }
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        // Observe counter elements
+        document.querySelectorAll("[id^='counter-']").forEach((el) => {
+          observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Carousel functionality
+        const carousel = document.getElementById("carousel");
+        const slides = document.querySelectorAll(".carousel-item");
+        const dots = document.querySelectorAll(".carousel-dot");
+        const prevButton = document.getElementById("prev-slide");
+        const nextButton = document.getElementById("next-slide");
+
+        let currentIndex = 0;
+        const slideCount = slides.length;
+
+        function updateCarousel() {
+          carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+          // Update dots
+          dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+              dot.classList.add("active");
+              dot.classList.remove("bg-white/50");
+              dot.classList.add("bg-white");
+            } else {
+              dot.classList.remove("active");
+              dot.classList.add("bg-white/50");
+              dot.classList.remove("bg-white");
+            }
+          });
+        }
+
+        // Dot click handlers
+        dots.forEach((dot) => {
+          dot.addEventListener("click", function () {
+            currentIndex = parseInt(this.getAttribute("data-index"));
+            updateCarousel();
+          });
+        });
+
+        // Button handlers
+        prevButton.addEventListener("click", function () {
+          currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+          updateCarousel();
+        });
+
+        nextButton.addEventListener("click", function () {
+          currentIndex = (currentIndex + 1) % slideCount;
+          updateCarousel();
+        });
+
+        // Auto-advance carousel
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % slideCount;
+          updateCarousel();
+        }, 5000);
+
+        // Case status form handling
+        const caseStatusForm = document.getElementById("case-status-form");
+        const caseStatusResults = document.getElementById(
+          "case-status-results"
+        );
+        const caseError = document.getElementById("case-error");
+        const tryAgainButton = document.getElementById("try-again");
+        const lottieLoader = document.getElementById("lottie-loader");
+
+        caseStatusForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show loader
+          lottieLoader.classList.remove("hidden");
+
+          // Load Lottie animation
+          const animation = lottie.loadAnimation({
+            container: document.getElementById("lottie-animation"),
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: "https://assets5.lottiefiles.com/packages/lf20_a2chheio.json",
+          });
+
+          // Simulate API call
+          setTimeout(() => {
+            lottieLoader.classList.add("hidden");
+            animation.destroy();
+
+            const caseNumber = document.getElementById("case-number").value;
+            if (caseNumber.toLowerCase().includes("jp")) {
+              caseStatusResults.classList.remove("hidden");
+              caseError.classList.add("hidden");
+
+              // Populate timeline (simplified for demo)
+              const timeline = document.getElementById("case-timeline");
+              timeline.innerHTML = `
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <i class="ri-check-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Initial Consultation</h4>
+                    <p class="text-sm text-gray-500">May 1, 2025</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <i class="ri-check-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Case Filed</h4>
+                    <p class="text-sm text-gray-500">May 10, 2025</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <div class="w-3 h-3 bg-primary rounded-full"></div>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Discovery Phase</h4>
+                    <p class="text-sm text-gray-500">In Progress</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Pre-Trial Motions</h4>
+                    <p class="text-sm text-gray-500">Pending</p>
+                  </div>
+                </div>
+              `;
+            } else {
+              caseStatusResults.classList.add("hidden");
+              caseError.classList.remove("hidden");
+            }
+          }, 1500);
+        });
+
+        tryAgainButton.addEventListener("click", function () {
+          caseStatusResults.classList.add("hidden");
+          caseError.classList.add("hidden");
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          Swal.fire({
+            title: "Thank You!",
+            text: "Your consultation request has been submitted. We will contact you shortly.",
+            icon: "success",
+            confirmButtonColor: "#1a365d",
+          }).then(() => {
+            contactForm.reset();
+          });
+        });
+
+        // Newsletter form handling
+        const newsletterForm = document.getElementById("newsletter-form");
+        newsletterForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          Swal.fire({
+            title: "Subscribed!",
+            text: "Thank you for subscribing to our newsletter.",
+            icon: "success",
+            confirmButtonColor: "#1a365d",
+          }).then(() => {
+            newsletterForm.reset();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

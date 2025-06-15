@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Justice Chambers - Trusted Legal Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1A365D", // Deep navy blue - conveys trust and professionalism
+              secondary: "#E2E8F0", // Light slate - for backgrounds and secondary elements
+              accent: "#2C5282", // Medium blue - for hover states and accents
+              highlight: "#B38B59", // Warm bronze - for buttons and important elements
+              text: "#2D3748", // Dark gray-blue - primary text
+              light: "#F7FAFC", // Off-white - for light backgrounds
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .contact-card {
+        transition: all 0.3s ease;
+      }
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .contact-icon {
+        transition: all 0.3s ease;
+      }
+      .contact-card:hover .contact-icon {
+        transform: scale(1.1);
+      }
+      .branch-card {
+        transition: all 0.3s ease;
+      }
+      .branch-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .map-container {
+        height: 400px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .btn-glow {
+        box-shadow: 0 4px 15px rgba(26, 54, 93, 0.3);
+      }
+      .btn-glow:hover {
+        box-shadow: 0 6px 20px rgba(26, 54, 93, 0.4);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center">
+          <span class="text-3xl font-['Pacifico'] text-primary"
+            >Justice Chambers</span
+          >
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >About Us</a
+          >
+          <a
+            href="ourteam.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Our Team</a
+          >
+          <!-- <a
+            href="#testimonials"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Testimonials</a
+          > -->
+          <a
+            href="contact.html"
+            class="text-primary font-medium hover:text-secondary transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#contact-form"
+            class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors"
+            >Free Consultation</a
+          >
+          <div
+            class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer"
+            id="mobile-menu-button"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <a
+            href="index.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >About Us</a
+          >
+          <a
+            href="team.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Our Team</a
+          >
+          <!-- <a
+            href="#testimonials"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Testimonials</a
+          > -->
+          <a href="contact.html" class="text-primary font-medium py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg relative overflow-hidden">
+      <!-- Animated background elements -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div
+          class="absolute top-20 left-10 w-16 h-16 rounded-full bg-white/10 animate-float"
+        ></div>
+        <div
+          class="absolute top-1/3 right-20 w-24 h-24 rounded-full bg-white/5 animate-float"
+          style="animation-delay: 0.5s"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-20 h-20 rounded-full bg-white/7 animate-float"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute top-1/2 right-1/3 w-12 h-12 rounded-full bg-white/10 animate-float"
+          style="animation-delay: 1.5s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 fade-in">
+            Contact Justice Chambers
+          </h1>
+          <p
+            class="text-xl text-white/90 mb-8 fade-in"
+            style="animation-delay: 0.2s"
+          >
+            Our legal team is ready to provide the guidance and support you
+            need. Reach out for a confidential consultation.
+          </p>
+          <div
+            class="flex flex-wrap justify-center gap-4 fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <a
+              href="#contact-form"
+              class="bg-white text-primary px-8 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors btn-glow"
+              >Request Consultation</a
+            >
+            <a
+              href="tel:+442071234567"
+              class="bg-transparent border-2 border-white text-white px-8 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-white/10 transition-colors btn-glow"
+            >
+              <i class="ri-phone-line mr-2"></i> Call Us Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="text-sm font-medium text-primary mb-2 inline-block">
+            HOW TO REACH US
+          </span>
+          <h2 class="text-3xl font-bold mb-4">Connect With Our Legal Team</h2>
+          <p class="text-gray-600">
+            Whether you need immediate legal assistance or have general
+            inquiries, we're available through these channels.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Contact Option 1 -->
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md contact-card">
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 contact-icon mx-auto"
+            >
+              <i class="ri-phone-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Call Us</h3>
+            <p class="text-gray-600 mb-4 text-center">
+              Speak directly with our legal team for urgent matters
+            </p>
+            <div class="text-center">
+              <a
+                href="tel:+442071234567"
+                class="text-primary font-medium hover:text-secondary transition-colors"
+              >
+                +44 (0)20 7123 4567
+              </a>
+              <p class="text-gray-500 text-sm mt-1">
+                Available 9AM - 5:30PM GMT
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Option 2 -->
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md contact-card">
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 contact-icon mx-auto"
+            >
+              <i class="ri-mail-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Email Us</h3>
+            <p class="text-gray-600 mb-4 text-center">
+              Send us your legal questions and we'll respond promptly
+            </p>
+            <div class="text-center">
+              <a
+                href="mailto:enquiries@justicechambers.co"
+                class="text-primary font-medium hover:text-secondary transition-colors"
+              >
+                enquiries@justicechambers.co
+              </a>
+              <p class="text-gray-500 text-sm mt-1">Response within 24 hours</p>
+            </div>
+          </div>
+
+          <!-- Contact Option 3 -->
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md contact-card">
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 contact-icon mx-auto"
+            >
+              <i class="ri-calendar-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">
+              Schedule a Meeting
+            </h3>
+            <p class="text-gray-600 mb-4 text-center">
+              Book a consultation with one of our attorneys
+            </p>
+            <div class="text-center">
+              <a
+                href="#contact-form"
+                class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors btn-glow"
+              >
+                Book Consultation
+              </a>
+              <p class="text-gray-500 text-sm mt-2">In-person or virtual</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Office Location -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="">
+            <div class="map-container">
+              <!-- Embedded Google Map -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.680380986593!2d-0.1119876842301295!3d51.51424117963448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2suk!4v1622037656787!5m2!1sen!2suk"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div>
+            <span class="text-sm font-medium text-primary mb-2 inline-block">
+              OUR LONDON OFFICE
+            </span>
+            <h2 class="text-3xl font-bold mb-6">Main Office Location</h2>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                >
+                  <i class="ri-building-2-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Address</h4>
+                  <p class="text-gray-600">
+                    42 Chancery Lane<br />
+                    London WC2A 1JA<br />
+                    United Kingdom
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Phone</h4>
+                  <p class="text-gray-600">
+                    +44 (0)20 7123 4567<br />
+                    Fax: +44 (0)20 7123 4568<br />
+                    Mon-Fri: 9:00 AM - 5:30 PM GMT
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Email</h4>
+                  <p class="text-gray-600">
+                    enquiries@justicechambers.co<br />
+                    For general inquiries
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                >
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Office Hours</h4>
+                  <p class="text-gray-600">
+                    Monday - Friday: 9:00 AM - 5:30 PM GMT<br />
+                    Weekends & Bank Holidays: Closed
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4 mt-1"
+                >
+                  <i class="ri-subway-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Transport Links</h4>
+                  <p class="text-gray-600">
+                    Chancery Lane (Central line)<br />
+                    Temple (Circle & District lines)<br />
+                    Holborn (Central & Piccadilly lines)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gray-50 p-8 md:p-12 rounded-lg shadow-sm">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+              <span class="text-sm font-medium text-primary mb-2 inline-block">
+                REQUEST A CONSULTATION
+              </span>
+              <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+              <p class="text-gray-600">
+                Fill out the form below and our legal team will contact you to
+                schedule a confidential consultation.
+              </p>
+            </div>
+
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="company"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Legal Service Needed *</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                >
+                  <option value="">Select a service</option>
+                  <option value="civil">Civil Litigation</option>
+                  <option value="real-estate">Real Estate Law</option>
+                  <option value="business">Business Law</option>
+                  <option value="family">Family Law</option>
+                  <option value="estate">Estate Planning</option>
+                  <option value="criminal">Criminal Defense</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Brief Description of Your Legal Matter *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                ></textarea>
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  required
+                  class="w-4 h-4 text-primary rounded focus:ring-primary/50 border-gray-300"
+                />
+                <label for="privacy" class="ml-2 block text-sm text-gray-700">
+                  I agree to the
+                  <a href="#" class="text-primary hover:underline"
+                    >privacy policy</a
+                  >
+                  and consent to my data being processed
+                </label>
+              </div>
+
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-8 py-4 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors btn-glow"
+                >
+                  Request Consultation
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+          <span class="text-sm font-medium text-primary mb-2 inline-block">
+            FREQUENTLY ASKED QUESTIONS
+          </span>
+          <h2 class="text-3xl font-bold mb-4">Common Legal Questions</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Find answers to some of our most frequently asked legal questions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <!-- Column 1 -->
+          <div class="space-y-5">
+            <!-- FAQ 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  How much does an initial consultation cost?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  We offer a free 30-minute initial consultation for most legal
+                  matters. During this consultation, we'll discuss your
+                  situation and provide guidance on how we can assist you. For
+                  complex matters requiring specialized expertise, we may charge
+                  a nominal fee which will be disclosed upfront.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  What information should I bring to my first meeting?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  For your first meeting, please bring any relevant documents
+                  related to your legal matter, including contracts, court
+                  papers, or correspondence. If your matter involves financial
+                  aspects, bring relevant financial statements or records. Our
+                  team will provide you with a specific list of documents to
+                  bring based on your particular legal needs.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  How are your legal fees structured?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  Our fee structure varies depending on the type of legal
+                  service. We offer hourly rates, fixed fees for certain
+                  services, and in some cases, contingency fees (where we only
+                  get paid if you win your case). During your initial
+                  consultation, we'll discuss the fee structure that applies to
+                  your specific matter and provide a clear estimate of
+                  anticipated costs.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  How long will my legal matter take to resolve?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  The duration depends on the complexity of your case and
+                  whether it involves court proceedings. Some matters can be
+                  resolved in weeks, while complex litigation may take months or
+                  years. After reviewing your situation, we'll provide an
+                  estimated timeline and keep you informed of progress
+                  throughout the process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="space-y-5">
+            <!-- FAQ 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  Do you offer virtual consultations?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  Yes, we offer secure video consultations for clients who
+                  prefer not to visit our office in person. Our virtual
+                  consultations maintain the same level of confidentiality as
+                  in-person meetings. We use encrypted platforms to ensure your
+                  privacy is protected.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  What makes Justice Chambers different from other law firms?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  With over 25 years of experience, Justice Chambers combines
+                  deep legal expertise with a client-centered approach. Unlike
+                  larger firms where clients can feel like just another case
+                  number, we provide personalized attention from experienced
+                  attorneys. Our commitment to excellence and ethical practice
+                  has earned us recognition from prestigious legal
+                  organizations.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  How do I know if I have a strong legal case?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  The strength of a legal case depends on many factors including
+                  evidence, applicable laws, and specific circumstances. During
+                  your consultation, we'll evaluate the merits of your case and
+                  provide honest advice about your legal options and likelihood
+                  of success. We'll never take on a case unless we believe we
+                  can provide meaningful help.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <button
+                class="faq-toggle w-full flex justify-between items-center text-left"
+              >
+                <h3 class="text-lg font-semibold">
+                  What should I do if I need urgent legal assistance?
+                </h3>
+                <i class="ri-arrow-down-s-line text-primary text-xl"></i>
+              </button>
+              <div class="faq-content mt-3 hidden">
+                <p class="text-gray-600">
+                  For urgent legal matters, please call our main office number
+                  immediately. If your call is outside regular business hours,
+                  our answering service will connect you with the attorney on
+                  call. In emergency situations involving imminent legal action
+                  (such as arrests or restraining orders), we can arrange for
+                  immediate representation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="index.html" class="inline-block mb-6">
+              <span class="text-3xl font-['Pacifico'] text-white"
+                >Justice Chambers</span
+              >
+            </a>
+            <p class="text-gray-400 mb-6">
+              Providing exceptional legal services with integrity and
+              professionalism since 1995.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Practice Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#team"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Practice Areas</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="service-civil-litigation.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Civil Litigation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-real-estate.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Real Estate Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-business.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-family.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Family Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-estate.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Estate Planning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-criminal.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Criminal Defense</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for legal updates and firm news.
+            </p>
+            <form class="mb-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="flex-grow px-4 py-2 bg-gray-800 border border-gray-700 rounded-l focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-white"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="text-gray-400 text-sm">
+              <p class="mb-2">Awards & Recognitions:</p>
+              <div class="flex flex-wrap gap-2">
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  Best Law Firm 2024
+                </div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  Super Lawyers
+                </div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  AV Rated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 Justice Chambers. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Attorney Advertising</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // FAQ dropdown functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".faq-toggle");
+
+        toggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            content.classList.toggle("hidden");
+
+            const icon = this.querySelector("i");
+            if (content.classList.contains("hidden")) {
+              icon.classList.remove("ri-arrow-up-s-line");
+              icon.classList.add("ri-arrow-down-s-line");
+            } else {
+              icon.classList.remove("ri-arrow-down-s-line");
+              icon.classList.add("ri-arrow-up-s-line");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

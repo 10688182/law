@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Justice Chambers - Trusted Legal Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1A365D", // Deep navy blue - conveys trust and professionalism
+              secondary: "#E2E8F0", // Light slate - for backgrounds and secondary elements
+              accent: "#2C5282", // Medium blue - for hover states and accents
+              highlight: "#B38B59", // Warm bronze - for buttons and important elements
+              text: "#2D3748", // Dark gray-blue - primary text
+              light: "#F7FAFC", // Off-white - for light backgrounds
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .slide-up {
+        animation: slideUp 0.8s ease-in-out;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .scale-in {
+        animation: scaleIn 0.8s ease-in-out;
+      }
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .glow-box {
+        transition: all 0.3s ease;
+      }
+      .glow-box:hover {
+        box-shadow: 0 10px 25px -5px rgba(26, 54, 93, 0.3);
+      }
+      .rotate-icon {
+        transition: transform 0.5s ease;
+      }
+      .rotate-icon:hover {
+        transform: rotate(15deg);
+      }
+      .partner-card {
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
+      .partner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .partner-specialty {
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      .partner-specialty:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+      }
+      .corporate-law:before {
+        background-color: #3b82f6;
+      }
+      .litigation:before {
+        background-color: #ef4444;
+      }
+      .real-estate:before {
+        background-color: #10b981;
+      }
+      .intellectual-property:before {
+        background-color: #f59e0b;
+      }
+      .family-law:before {
+        background-color: #8b5cf6;
+      }
+      .timeline-item {
+        position: relative;
+        padding-left: 40px;
+      }
+      .timeline-item:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: #1a365d;
+      }
+      .timeline-item:after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 20px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #1a365d;
+        border: 4px solid #d69e2e;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center">
+          <span class="text-3xl font-['Pacifico'] text-primary"
+            >Justice Chambers</span
+          >
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-primary font-medium hover:text-secondary transition-colors"
+            >About Us</a
+          >
+          <a
+            href="ourteam.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Our Team</a
+          >
+          <!-- <a
+            href="testimonials.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Testimonials</a
+          > -->
+          <a
+            href="contact.html"
+            class="text-gray-700 font-medium hover:text-primary transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="contact.html"
+            class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors"
+            >Free Consultation</a
+          >
+          <div
+            class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer"
+            id="mobile-menu-button"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <a
+            href="index.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Practice Areas</a
+          >
+          <a
+            href="about.html"
+            class="text-primary font-medium py-2 border-b border-gray-100"
+            >About Us</a
+          >
+          <a
+            href="team.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Our Team</a
+          >
+          <!-- <a
+            href="testimonials.html"
+            class="text-gray-700 font-medium py-2 border-b border-gray-100"
+            >Testimonials</a
+          > -->
+          <a href="contact.html" class="text-gray-700 font-medium py-2"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div
+          class="absolute top-1/4 left-1/4 w-40 h-40 rounded-full bg-white animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute top-1/3 right-1/3 w-60 h-60 rounded-full bg-white animate-pulse-slow animation-delay-1000"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-50 h-50 rounded-full bg-white animate-pulse-slow animation-delay-2000"
+        ></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center animate-fade-in">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-white mb-6 animate-slide-up"
+          >
+            <span class="inline-block animate-pulse-slow">Our Legacy,</span>
+            <span class="inline-block animate-bounce-slow">Your Justice</span>
+          </h1>
+          <p
+            class="text-xl text-white/90 mb-8 animate-slide-up animation-delay-100"
+          >
+            For over 25 years, Justice Chambers has been delivering exceptional
+            legal services with integrity and professionalism.
+          </p>
+
+          <div
+            class="flex justify-center space-x-4 animate-slide-up animation-delay-200"
+          >
+            <a
+              href="#mission"
+              class="bg-white text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors"
+              >Our Mission</a
+            >
+            <a
+              href="contact.html"
+              class="bg-secondary text-primary px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-secondary/90 transition-colors"
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2 animate-fade-in">
+            <span class="text-sm font-medium text-primary mb-2 inline-block"
+              ><span class="inline-block animate-bounce">
+                <i class="ri-scales-line mr-1"></i>
+                WHO WE ARE
+                <i class="ri-scales-line ml-1"></i> </span
+            ></span>
+            <h2 class="text-3xl font-bold mb-6">
+              Trusted Legal Advocates Since 1995
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Justice Chambers is a premier law firm dedicated to providing
+              exceptional legal services with integrity and professionalism. Our
+              team of experienced attorneys brings diverse expertise across
+              multiple practice areas to serve our clients' needs.
+            </p>
+            <p class="text-gray-600 mb-8">
+              We are committed to delivering personalized legal solutions that
+              achieve the best possible outcomes for our clients while upholding
+              the highest ethical standards. Our approach combines deep legal
+              knowledge with practical business understanding to provide
+              comprehensive counsel.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 rotate-icon"
+                >
+                  <i class="ri-gavel-line ri-xl text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Courtroom Experience</h4>
+                  <p class="text-sm text-gray-500">2500+ cases handled</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 rotate-icon"
+                >
+                  <i class="ri-team-line ri-xl text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Expert Team</h4>
+                  <p class="text-sm text-gray-500">15+ attorneys</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 relative animate-scale-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&height=600&q=80"
+                alt="Our Team"
+                class="rounded-xl shadow-xl w-full h-auto"
+              />
+              <div
+                class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg glow-box"
+              >
+                <div class="flex items-center">
+                  <div
+                    class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white mr-4"
+                  >
+                    <i class="ri-trophy-line ri-2x"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg">AV Preeminent Rated</h4>
+                    <p class="text-sm text-gray-600">
+                      Highest peer rating for ethics and skill
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section id="mission" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <span class="text-sm font-medium text-primary mb-2 inline-block"
+            ><span class="inline-block animate-bounce">
+              <i class="ri-scales-line mr-1"></i>
+              OUR CORE
+              <i class="ri-scales-line ml-1"></i> </span
+          ></span>
+          <h2 class="text-3xl font-bold mb-4">
+            Guiding Principles of Our Practice
+          </h2>
+          <p class="text-gray-600">
+            The foundation of everything we do at Justice Chambers
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Mission Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md glow-box animate-slide-up"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-flashlight-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Our Mission</h3>
+            <p class="text-gray-600 text-center">
+              To provide exceptional legal representation with integrity and
+              professionalism. We are committed to protecting our clients'
+              rights, achieving justice through excellence in advocacy, and
+              delivering personalized legal solutions tailored to each client's
+              unique needs and objectives.
+            </p>
+          </div>
+
+          <!-- Vision Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md glow-box animate-slide-up animation-delay-100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-eye-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Our Vision</h3>
+            <p class="text-gray-600 text-center">
+              To be recognized as the most trusted legal partner for individuals
+              and businesses, known for our unwavering commitment to justice,
+              innovative legal strategies, and exceptional client service. We
+              strive to set the standard for legal excellence in our community.
+            </p>
+          </div>
+
+          <!-- Promise Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md glow-box animate-slide-up animation-delay-200"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-hand-heart-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-center">Our Promise</h3>
+            <p class="text-gray-600 text-center">
+              To treat every client with respect, provide honest assessments,
+              maintain strict confidentiality, and pursue their legal objectives
+              with dedication and skill. We promise to be accessible,
+              responsive, and transparent in all our dealings.
+            </p>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-2xl font-semibold mb-8 text-center animate-fade-in">
+            Our Core Values
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Value 1 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-user-5-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Client-Centered</h4>
+              <p class="text-gray-600 text-sm">
+                We listen first, then advise. Your goals become our objectives,
+                and your success is our priority.
+              </p>
+            </div>
+
+            <!-- Value 2 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up animation-delay-100"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-lightbulb-flash-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Strategic Thinking</h4>
+              <p class="text-gray-600 text-sm">
+                We develop innovative legal strategies tailored to each client's
+                unique situation and objectives.
+              </p>
+            </div>
+
+            <!-- Value 3 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up animation-delay-200"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-shield-check-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Integrity</h4>
+              <p class="text-gray-600 text-sm">
+                We uphold the highest ethical standards in all our professional
+                dealings and maintain strict confidentiality.
+              </p>
+            </div>
+
+            <!-- Value 4 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up animation-delay-300"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-team-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Collaboration</h4>
+              <p class="text-gray-600 text-sm">
+                We work closely with clients and leverage our team's diverse
+                expertise to achieve optimal results.
+              </p>
+            </div>
+
+            <!-- Value 5 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-medal-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Excellence</h4>
+              <p class="text-gray-600 text-sm">
+                We are committed to the highest standards of legal practice and
+                continuous professional development.
+              </p>
+            </div>
+
+            <!-- Value 6 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up animation-delay-100"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-community-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Community</h4>
+              <p class="text-gray-600 text-sm">
+                We believe in giving back through pro bono work and supporting
+                local organizations.
+              </p>
+            </div>
+
+            <!-- Value 7 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up animation-delay-200"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-flashlight-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Tenacity</h4>
+              <p class="text-gray-600 text-sm">
+                We are relentless in pursuing our clients' interests while
+                maintaining professionalism and respect.
+              </p>
+            </div>
+
+            <!-- Value 8 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slide-up animation-delay-300"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-heart-line ri-xl text-primary"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Compassion</h4>
+              <p class="text-gray-600 text-sm">
+                We understand that legal issues can be stressful and provide
+                support with empathy and understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <span class="text-sm font-medium text-primary mb-2 inline-block"
+            ><span class="inline-block animate-bounce">
+              <i class="ri-scales-line mr-1"></i>
+              OUR HISTORY
+              <i class="ri-scales-line ml-1"></i> </span
+          ></span>
+          <h2 class="text-3xl font-bold mb-4">Our Legal Legacy</h2>
+          <p class="text-gray-600">
+            From humble beginnings to becoming a trusted legal authority
+          </p>
+        </div>
+
+        <div class="relative timeline pl-12 max-w-3xl mx-auto">
+          <!-- Timeline Item 1 -->
+          <div class="relative mb-12 timeline-item animate-slide-up">
+            <div
+              class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full"
+                  >1995</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Firm Established</h3>
+              <p class="text-gray-600">
+                Justice Chambers was founded by Elizabeth Carter with just two
+                attorneys focusing on civil litigation and family law. Our first
+                office opened in downtown with a commitment to accessible,
+                high-quality legal services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div
+            class="relative mb-12 timeline-item animate-slide-up animation-delay-100"
+          >
+            <div
+              class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full"
+                  >2002</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold mb-2">
+                Expansion to Corporate Law
+              </h3>
+              <p class="text-gray-600">
+                Recognizing the growing need for business legal services, we
+                expanded our practice to include corporate law, adding three new
+                attorneys with expertise in business formation, contracts, and
+                commercial transactions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div
+            class="relative mb-12 timeline-item animate-slide-up animation-delay-200"
+          >
+            <div
+              class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full"
+                  >2008</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold mb-2">New Headquarters</h3>
+              <p class="text-gray-600">
+                We moved to our current state-of-the-art offices, allowing us to
+                better serve our growing client base. This year also marked our
+                first recognition in the "Best Law Firms" ranking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div
+            class="relative mb-12 timeline-item animate-slide-up animation-delay-300"
+          >
+            <div
+              class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full"
+                  >2015</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Technology Integration</h3>
+              <p class="text-gray-600">
+                We implemented cutting-edge legal technology to enhance client
+                service, including secure client portals, electronic document
+                management, and virtual consultation capabilities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div
+            class="relative timeline-item animate-slide-up animation-delay-400"
+          >
+            <div
+              class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full"
+                  >2023</span
+                >
+              </div>
+              <h3 class="text-xl font-semibold mb-2">
+                Comprehensive Legal Services
+              </h3>
+              <p class="text-gray-600">
+                Today, Justice Chambers offers full-service legal representation
+                across five core practice areas with a team of 15 experienced
+                attorneys. We continue to grow while maintaining our commitment
+                to personalized service and legal excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <span class="text-sm font-medium text-primary mb-2 inline-block"
+            ><span class="inline-block animate-bounce">
+              <i class="ri-scales-line mr-1"></i>
+              MEET THE TEAM
+              <i class="ri-scales-line ml-1"></i> </span
+          ></span>
+          <h2 class="text-3xl font-bold mb-4">Our Partners</h2>
+          <p class="text-gray-600">
+            Experienced legal professionals guiding our firm's vision and growth
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Managing Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.3s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="Elizabeth Carter"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Elizabeth Carter</h3>
+              <p class="text-primary font-medium">Managing Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Oversees all practice areas</p>
+              <p class="text-gray-500 text-sm">With 30+ years experience</p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Elizabeth founded Justice Chambers in 1995 and has guided its
+              growth into one of the region's most respected full-service law
+              firms. A renowned litigator, she has argued before the Supreme
+              Court and serves on several legal ethics boards.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Corporate Law Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.4s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="James Wilson"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">James Wilson</h3>
+              <p class="text-primary font-medium">Senior Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty corporate-law font-medium">
+                Corporate Law
+              </p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              With over 25 years of experience, James leads our corporate
+              practice, advising Fortune 500 companies on complex mergers and
+              acquisitions. His strategic approach has saved clients millions in
+              potential liabilities.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Litigation Partner -->
+          <div
+            class="partner-card bg-white rounded-lg p-6 shadow-md"
+            style="animation-delay: 0.5s"
+          >
+            <div class="flex flex-col items-center mb-4">
+              <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"
+                  alt="Sarah Johnson"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold">Sarah Johnson</h3>
+              <p class="text-primary font-medium">Partner</p>
+            </div>
+            <div class="text-center mb-4">
+              <p class="text-gray-600 mb-2">Specializing in:</p>
+              <p class="partner-specialty litigation font-medium">Litigation</p>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Sarah has successfully argued over 200 cases before state and
+              federal courts, with a 90% success rate in high-stakes litigation.
+              Her courtroom skills are matched by her ability to negotiate
+              favorable settlements.
+            </p>
+            <div class="flex justify-center space-x-3">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                <i class="ri-profile-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a
+            href="ourteam.html"
+            class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors inline-block"
+            style="animation-delay: 0.6s"
+            >Meet Our Full Team</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section
+      class="py-16 bg-primary bg-gradient-to-r from-primary to-secondary text-white"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Stat 1 -->
+          <div class="text-center animate-fade-in">
+            <div
+              class="text-4xl md:text-5xl font-bold mb-2 flex justify-center items-center"
+            >
+              <span class="counter" data-target="25">0</span
+              ><span class="wave-animation">+</span>
+            </div>
+            <p class="text-white/90">Years of Experience</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="text-center animate-fade-in animation-delay-100">
+            <div class="text-4xl md:text-5xl font-bold mb-2">
+              <span class="counter" data-target="2500">0</span>+
+            </div>
+            <p class="text-white/90">Cases Handled</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="text-center animate-fade-in animation-delay-200">
+            <div class="text-4xl md:text-5xl font-bold mb-2">
+              <span class="counter" data-target="15">0</span>
+            </div>
+            <p class="text-white/90">Qualified Attorneys</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="text-center animate-fade-in animation-delay-300">
+            <div class="text-4xl md:text-5xl font-bold mb-2">
+              <span class="counter" data-target="5">0</span>
+            </div>
+            <p class="text-white/90">Practice Areas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div
+          class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12 text-white relative overflow-hidden animate-scale-in"
+        >
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32"
+          ></div>
+          <div class="relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+              <h2 class="text-3xl font-bold mb-6">
+                Ready to
+                <span class="inline-block animate-bounce">Protect</span> Your
+                Rights?
+              </h2>
+              <p class="text-white/90 mb-8">
+                Our team of legal experts is ready to evaluate your case and
+                recommend the best course of action tailored to your specific
+                needs and objectives.
+              </p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a
+                  href="contact.html"
+                  class="bg-white text-primary px-8 py-4 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition-colors"
+                  >Schedule Consultation</a
+                >
+                <a
+                  href="tel:+44 (0)20 7123 4567"
+                  class="bg-transparent border-2 border-white text-white px-8 py-4 !rounded-button whitespace-nowrap font-medium hover:bg-white/10 transition-colors"
+                >
+                  <i class="ri-phone-line mr-2"></i> Call Us Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 animate-fade-in">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="index.html" class="inline-block mb-6">
+              <span class="text-3xl font-['Pacifico'] text-white"
+                >Justice Chambers</span
+              >
+            </a>
+            <p class="text-gray-400 mb-6">
+              Providing exceptional legal services with integrity and
+              professionalism since 1995. Committed to protecting your rights
+              and achieving justice through excellence in advocacy.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Practice Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="team.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Practice Areas</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="service-civil-litigation.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Corporate Law</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-real-estate.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Litigation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-business.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Real Estate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-family.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Intellectual Property</a
+                >
+              </li>
+              <li>
+                <a
+                  href="service-estate.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Family Law</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for legal updates and firm news.
+            </p>
+            <form id="newsletter-form" class="mb-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="flex-grow px-4 py-2 bg-gray-800 border border-gray-700 rounded-l focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm text-white"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            <div class="text-gray-400 text-sm">
+              <p class="mb-2">Awards & Recognitions:</p>
+              <div class="flex flex-wrap gap-2">
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  Best Law Firm 2024
+                </div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  Super Lawyers
+                </div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-medium">
+                  AV Rated
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 Justice Chambers. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 text-sm hover:text-white transition-colors"
+                >Attorney Advertising</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const targetPosition =
+              targetElement.getBoundingClientRect().top +
+              window.pageYOffset -
+              headerHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
+        });
+      });
+
+      // Counter animation
+      const counters = document.querySelectorAll(".counter");
+      const speed = 200;
+
+      function animateCounters() {
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          const increment = target / speed;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animateCounters, 1);
+          } else {
+            counter.innerText = target;
+          }
+        });
+      }
+
+      // Start counter animation when stats section is in view
+      const statsSection = document.querySelector("section.bg-primary");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            observer.unobserve(statsSection);
+          }
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(statsSection);
+
+      // Add animation classes when elements come into view
+      const animateElements = document.querySelectorAll('[class*="animate-"]');
+      const elementObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(
+                entry.target.dataset.animation || "fade-in"
+              );
+              elementObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      animateElements.forEach((element) => {
+        elementObserver.observe(element);
+      });
+    </script>
+  </body>
+</html>
